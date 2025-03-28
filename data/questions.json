@@ -1,0 +1,246 @@
+{
+  "Sex": {
+    "question": "Яка ваша стать?",
+    "answers": ["Жіноча", "Чоловіча"],
+    "input_type": "select",
+    "section": "general"
+  },
+  "AgeCategory": {
+    "question": "До якої вікової категорії ви належите?",
+    "answers": [
+      "18-24",
+      "25-29",
+      "30-34",
+      "35-39",
+      "40-44",
+      "45-49",
+      "50-54",
+      "55-59",
+      "60-64",
+      "65-69",
+      "70-74",
+      "75-79",
+      "80+",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "HeightInMeters": {
+    "question": "Який ваш зріст (у метрах)?",
+    "answers": [],
+    "input_type": "number",
+    "section": "general"
+  },
+  "WeightInKilograms": {
+    "question": "Яка ваша вага (у кілограмах)?",
+    "answers": [],
+    "input_type": "number",
+    "section": "general"
+  },
+  "SleepHours": {
+    "question": "Скільки годин на добу ви спите в середньому?",
+    "answers": [],
+    "input_type": "number",
+    "section": "general"
+  },
+  "MentalHealthDays": {
+    "question": "Скільки днів протягом останнього місяця ви преживали психологічні труднощі?",
+    "answers": [],
+    "input_type": "number",
+    "section": "general"
+  },
+  "PhysicalHealthDays": {
+    "question": "Скільки днів протягом останнього місяця ви преживали фізичні труднощі?",
+    "answers": [],
+    "input_type": "number",
+    "section": "general"
+  },
+  "GeneralHealth": {
+    "question": "Як би ви оцінили свій стан здоров'я зараз?",
+    "answers": [
+      "Дуже погано",
+      "Погано",
+      "Нормально",
+      "Добре",
+      "Дуже добре",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "PhysicalActivities": {
+    "question": "Чи займалися ви фізичною активністю за останній місяць?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "select",
+    "section": "general"
+  },
+  "SmokerStatus": {
+    "question": "Який ваш статус паління?",
+    "answers": [
+      "Ніколи не палив/ла",
+      "Палив/ла раніше",
+      "Палю час від часу",
+      "Палю кожен день",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "ECigaretteUsage": {
+    "question": "Як часто ви споживаєте електронні цигарки?",
+    "answers": [
+      "Ніколи не спожив/ла",
+      "Раніше споживав/ла, але зараз ні",
+      "Споживаю час від часу",
+      "Споживаю кожен день",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "RemovedTeeth": {
+    "question": "Скільки зубів у вас видалено?",
+    "answers": [
+      "Жодного",
+      "Від 1 до 5",
+      "6 або більше, але не всі",
+      "Усі",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "CovidPos": {
+    "question": "Чи був у вас позитивний результат на COVID-19?",
+    "answers": [
+      "Ні",
+      "Так",
+      "Позитивний результат при домашньому тестуванні",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "HadDiabetes": {
+    "question": "Чи був у вас діабет?",
+    "answers": [
+      "Ні",
+      "Ні, переддіабет або прикордонний діабет",
+      "Так",
+      "Так, але лише під час вагітності (для жінок)",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+
+  "TetanusLast10Tdap": {
+    "question": "Чи робили ви щеплення від правця за останні 10 років?",
+    "answers": [
+      "Ні, не робив/робила",
+      "Так, робив/робила, але не пам'ятаю, який тип",
+      "Так, робив/робила, але не Tdap",
+      "Так, робив/робила Tdap",
+      "Не знаю/Не бажаю відповідати"
+    ],
+    "input_type": "select",
+    "section": "general"
+  },
+  "AlcoholDrinkers": {
+    "question": "Чи вживали ви алкоголь протягом останніх 30 днів?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "select",
+    "section": "general"
+  },
+  "HighRiskLastYear": {
+    "question": "Так, якщо справедливо хоч одне твердження: Протягом останнього року ви вводили ін’єкційні препарати без призначення лікаря, лікування від захворювань, що передаються статевим шляхом, або ЗПСШ. Ви давали або отримували гроші або наркотики в обмін на секс протягом минулого року.",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "select",
+    "section": "binary"
+  },
+  "HIVTesting": {
+    "question": "Чи проходили ви тест на ВІЛ?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "select",
+    "section": "binary"
+  },
+  "FluVaxLast12": {
+    "question": "Чи робили ви вакцину проти грипу протягом останніх 12 місяців?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "select",
+    "section": "binary"
+  },
+  "PneumoVaxEver": {
+    "question": "Чи робили ви вакцину проти пневмонії?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "select",
+    "section": "binary"
+  },
+  "HadAsthma": {
+    "question": "Чи хворіли ви на астму?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "HadSkinCancer": {
+    "question": "Чи був у вас коли-небудь рак шкіри?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "HadCOPD": {
+    "question": "Чи був у вас хронічний обструктивний бронхіт (COPD)?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "HadDepressiveDisorder": {
+    "question": "Чи було у вас коли-небудь депресивний розлад?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "HadKidneyDisease": {
+    "question": "Чи було у вас коли-небудь захворювання нирок?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "HadArthritis": {
+    "question": "Чи хворіли/хворієте ви на артрит?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "DeafOrHardOfHearing": {
+    "question": "Чи маєте ви проблеми зі слухом?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "BlindOrVisionDifficulty": {
+    "question": "Чи маєте ви проблеми із зором?",
+    "answers": ["Так", "Ні", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "DifficultyConcentrating": {
+    "question": "Чи відчуваєте ви труднощі з концентрацією?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "DifficultyDressingBathing": {
+    "question": "Чи маєте ви труднощі з одяганням або купанням?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  },
+  "DifficultyErrands": {
+    "question": "Чи маєте ви труднощі із самостійним виконанням завдань?",
+    "answers": ["Ні", "Так", "Не знаю/Не бажаю відповідати"],
+    "input_type": "checkbox",
+    "section": "binary"
+  }
+}

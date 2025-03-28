@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Оцінка ризику кардіо-васкулярних захворювань</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="icon" href="static/heart-rate.png">
+    <script src="/static/js/script.js"></script>
+  </head>
+  <body>
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-content">
+        <h2 style="color:  #d43c4a">УВАГА</h2>
+        <p>Даний застосунок покликаний лише звернути увагу на важливість підтримання здорового образу життя та небезпеки кардіо-васкулярних захворювань для усіх груп людей!</p>
+        <p>Даний інструмент не може бути заміною медичної консультації. Автор проекта не несе жодної відповідальності за будь-які рішення прийняті внаслідок його використання.</p>
+        <button id="accept-btn">Прийняти</button>
+      </div>
+    </div>
+    <h1>Оцінка ризику кардіо-васкулярних захворювань</h1>
+    <div class="container">
+      <div class="left">
+        {% if errors %}
+        <div class="error-block">
+          <ul>
+            {% for key, err in errors.items() %}
+            <li>{{ questions[key]['question'] }}: {{ err }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        <form id="riskForm" method="post">
+          {% for key, question in questions.items() %}
+          <div>
+            {% if question.input_type == 'number' %}
+            <label for="{{ key }}">{{ question.question }}</label>
+            {% if key == "HeightInMeters" %}
+            <input type="number" name="{{ key }}" id="{{ key }}" min="0.1" max="2.8" step="0.01" value="{{ form_data[key] if form_data and key in form_data else '' }}" required />
+            {% elif key == "WeightInKilograms" %}
+            <input type="number" name="{{ key }}" id="{{ key }}" min="1" max="300" step="0.1" value="{{ form_data[key] if form_data and key in form_data else '' }}" required />
+            {% elif key == "SleepHours" %}
+            <input type="number" name="{{ key }}" id="{{ key }}" min="0" max="24" step="0.1" value="{{ form_data[key] if form_data and key in form_data else '' }}" required />
+            {% elif key == "MentalHealthDays" %}
+            <input type="number" name="{{ key }}" id="{{ key }}" min="0" max="31" step="1" value="{{ form_data[key] if form_data and key in form_data else '' }}" required />
+            {% else %}
+            <input type="number" name="{{ key }}" id="{{ key }}" required />
+            {% endif %}
+            {% elif question.input_type == 'select' %}
+            <label for="{{ key }}">{{ question.question }}</label>
+            <select name="{{ key }}" id="{{ key }}" required>
+              <option value="">-- Оберіть варіант --</option>
+              {% for answer in question.answers %}
+              <option value="{{ answer }}" {% if form_data and form_data.get(key)==answer %} selected {% endif %}>{{ answer }}</option>
+              {% endfor %}
+            </select>
+            {% elif question.input_type == 'checkbox' %}
+            <div class="checkbox-container">
+              <input type="checkbox" name="{{ key }}" id="{{ key }}" value="Так" {% if form_data and form_data.get(key)=="Так" %} checked {% endif %} />
+              <label for="{{ key }}">{{ question.question }}</label>
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+          <div id="risk-result"></div>
+
+          <button type="submit">Підрахувати ризик</button>
+          <button type="reset" onclick="resetForm()">Очистити</button>
+        </form>
+        </form>
+      </div>
+      <div class="right">
+        <h2>Про проєкт</h2>
+        <p>Цей проект використовує методи машинного навчання для оцінки ризику серцевого нападу на основі поведінкових даних. Він націлений на швидку оцінку вашого способу життя та ризик-групи, Вам не потрібні аналізи чи медична освіта, лише кілька хвилин на заповнення опитування. Всього існує 5 рівнів ризику - низький, помірний, середній, високий та дуже високий. </p>
+        <p>Оцінка, яку Ви отримаєте, не може бути гарантією відсутності ризику, так як під час дослідження даних я знайшов, що кардіо-васкулярні хвороби трапляються у всіх групах ризику. Тим не менш, чим вище рівень ризику - тим частіше трапляються серцеві напади, інсульти та інші хвороби серця.</p>
+        <h2>Про модель</h2>
+        <p>У якості моделі використовується логістична регресія newton-cholesky варіації, разом з поглибленим інжинірингом фіч. Модель заснована на даних з опитування CDC, що є частиною <a href ='https://www.cdc.gov/brfss/annual_data/annual_2022.html'>Behavioral Risk Factor Surveillance System (BRFSS)</a>. Це щорічне телефонне опитування, яке проводиться для збору даних про стан здоров'я громадян США. База даних BRFSS є найбільшою безперервно проведеною системою опитувань у світі. Щорічно опитуванням охоплюється понад 400 000 дорослих.</p>
+        <p>В якості цільової змінної використовувалась наявність серцевого нападу, інсульту чи болей в грудях</p>
+      </div>
+    </div>
+  </body>
+</html>
